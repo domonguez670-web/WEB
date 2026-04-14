@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 79, 163, 0.14), transparent 20%),
+    radial-gradient(circle at 50% 62%, rgba(255, 79, 163, 0.08), transparent 26%),
+    #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.heart-stage {
+  position: relative;
+  width: min(82vmin, 760px);
+  aspect-ratio: 1 / 1;
+  transform-style: preserve-3d;
+  filter: saturate(1.05);
+}
+
+.heart-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #ff4fa3;
+  font-size: clamp(12px, 1.35vmin, 18px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+  text-shadow:
+    0 0 4px rgba(255, 79, 163, 0.9),
+    0 0 10px rgba(255, 79, 163, 0.7),
+    0 0 22px rgba(255, 79, 163, 0.38);
+  will-change: transform, opacity;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+}
+
+.glow-1 {
+  width: 34vmin;
+  height: 34vmin;
+  background: rgba(255, 79, 163, 0.09);
+  top: 10%;
+}
+
+.glow-2 {
+  width: 28vmin;
+  height: 28vmin;
+  background: rgba(255, 79, 163, 0.08);
+  bottom: 12%;
+}
